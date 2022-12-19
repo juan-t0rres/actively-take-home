@@ -1,0 +1,18 @@
+.content {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  padding-top: 20px;
+}
+
+.header {
+  position: absolute;
+}
+
+.data-table {
+  margin-top: 20px;
+}
+
+.prediction {
+  margin-top: 10px;
+  font-size: 18px;
+}
