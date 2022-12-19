@@ -9,6 +9,7 @@ import Alert from "react-bootstrap/Alert";
 const CLOUD_FUNCTION_URL = "https://us-central1-actively-take-home-2f315.cloudfunctions.net/get_prediction";
 const allowedExtensions = ["csv"];
 
+// Helper function to call cloud function
 async function postData(url = "", data = {}) {
   const response = await fetch(url, {
     method: "POST",
@@ -40,9 +41,8 @@ function App() {
   const [prediction, setPrediction] = useState();
   const [loading, setLoading] = useState(false);
 
+  // Function that calls cloud function and sets the prediction
   async function makePrediction() {
-    //console.log(response);
-
     // Make sure we have an output selected
     if (!output) {
       setError("No output selected");
